@@ -12,19 +12,17 @@ namespace GitExample
         {
             Console.Write($"Введите радиус: ");
             int r = Convert.ToInt32(Console.ReadLine());
-            int count = 2;
-            for (int i = 0; i < 2 * r; i++)
+            // первая полуось
+            for (int i = 0; i < r; i++)
             {
-                
-                for (int j = r; j >= 0; j--)
+                for (int j = 0; j < r - i; j++)
                 {
                     Console.Write(" ");
                 }
-                for (int j = 0; j < count; j++)
+                for (int j = 0; j <= 10 + i * 2; j++)
                 {
                     Console.Write("*");
                 }
-                count++;
                 Console.WriteLine();
             }
 
